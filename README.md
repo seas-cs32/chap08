@@ -1,9 +1,8 @@
-This directory contains everything needed for Chapter 8
-(i.e., Problem 8 in Act I, Scene III (Numbers)).
+This directory contains everything needed for
+**Chapter 8 (What is My Problem?)** in
+*Computational Thinking and Problem Solving*.
 
-**Files for STUDENTS**
-
-`ale01.py`: The starter code for ALE #1.  Its code contents are the same as
+`ale02.py`: The starter code for ALE #2.  Its code contents are the same as
 ALE #5 from Chapter 6.
 
 `images/photobomb[1-3].jpg`: Three images of Waldo moving through Harvard Yard.
@@ -36,19 +35,5 @@ of the pixels in an image.
 `images/harvard.png`: The original image of Harvard Yard without Waldo
 photobombing it.
 
-`images/[waldo,wenda,odlaw].png`: The *Where's Waldo?* characters we use.
-
 `xverse.py`: A script that uses simple modifications to images to illustrate
 different traversals of 2-dimensional data.
-
-`pset4.md`: The description of the programming assignment for Chapter 8 (Act I,
-Scene III).
-
-`pset4_part1.ipynb`: The interactive Python notebook you need to complete part 1
-of pset4.  This notebook uses `images/[harvard,harvard2,waldo,wenda].png`.
-
-`images/harvard2.png`: A pre-made Harvard-Yard-with-hidden-Waldo image, in case
-you need it for pset4, part 1, step 3.
-
-`pset4_part2.ipynb`: The interactive Python notebook you need to complete part 2
-of pset4.  This notebook uses `images/[test[1-6],challenge].png`.

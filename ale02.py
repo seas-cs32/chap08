@@ -1,10 +1,10 @@
 '''
-ale01.py EVENTUALLY removes a moving object or individual from an image using
+ale02.py EVENTUALLY removes a moving object or individual from an image using
 an unspecified number of similar input images.  For each pixel in the shared
 frame, it selects the median pixel value from among these input images and
 places it in a new, "cleaned" image.
 
-Handout code for CS32 chapter 8, ALE #1.
+Handout code for ALE 8.2 (in Chapter 8).
 '''
 
 import sys
@@ -25,4 +25,4 @@ with Image.open(imfile) as im:
             r, g, b = im.getpixel((x,y))
             im.putpixel((x,y), (r, g//50, b//50))
 
-    im.show()
+    im.save('images/out.png')
