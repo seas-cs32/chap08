@@ -1,8 +1,8 @@
+### chap08/zero.py
 '''
 zero.py zeros the lowest 4 bits in all channels of the input image.  The input
 image is changed.  The resulting image is saved.
 '''
-
 import sys
 from PIL import Image
 
@@ -32,7 +32,7 @@ def main():
         sys.exit("Usage: python3 zero.py imagefile")
 
     with Image.open(imfile) as im:
-        # Create a new frame for resulting image
+        # Create a new frame for filtered image
         im_less = Image.new(im.mode, im.size)
 
         zero_image_lowest_bits(im, im_less)

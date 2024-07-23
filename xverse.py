@@ -1,3 +1,4 @@
+### chap08/xverse
 '''
 xverse.py -- uses an image to illustrate different traversals
 
@@ -6,12 +7,11 @@ touches along the way.  In short, it's a traverse-inverse (aka xverse).
 
 It stores the modified image in images/xverse.png
 '''
-
 import sys
 from PIL import Image
 
 
-# Many fun do_something functions the students might try
+# Many fun do_something functions you might try
 def grayscale(pixel):
     '''Turn pixel into grayscale'''
     r, g, b = pixel
@@ -34,8 +34,11 @@ def inverse(pixel):
     r, g, b = pixel
     return (256 - r, 256 - g, 256 - b)
 
+def do_something(pixel):
+    '''Does nothing to the pixel'''
+    return pixel
 
-def traverse(im, x, y):
+def traverse(im, stop_x, stop_y):
     '''Traverse an image from (0,0) until location (x,y)
        and do something at each visited pixel.  The input
        image is unchanged, and the changed image is returned.
@@ -48,7 +51,7 @@ def traverse(im, x, y):
             pixel = im.getpixel((i,j))
             new_im.putpixel((i,j), inverse(pixel))
             
-            if (i == x and j == y):
+            if (i == stop_x and j == stop_y):
                 return new_im
 
 
