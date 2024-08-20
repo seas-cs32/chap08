@@ -2,7 +2,7 @@
 '''
 xverse.py -- uses an image to illustrate different traversals
 
-By default, it runs a row-major traversal and inverts the pixels it
+By default, it runs a column-major traversal and inverts the pixels it
 touches along the way.  In short, it's a traverse-inverse (aka xverse).
 
 It stores the modified image in images/xverse.png
@@ -30,7 +30,7 @@ def sepia(pixel):
     return (r, g, b)
 
 def inverse(pixel):
-    '''Reverse video the input pixel'''
+    '''Invert the input pixel'''
     r, g, b = pixel
     return (256 - r, 256 - g, 256 - b)
 
@@ -39,7 +39,7 @@ def do_something(pixel):
     return pixel
 
 def traverse(im, stop_x, stop_y):
-    '''Traverse an image from (0,0) until location (x,y)
+    '''Traverse an image from (0,0) until location (stop_x,stop_y)
        and do something at each visited pixel.  The input
        image is unchanged, and the changed image is returned.
     '''
@@ -69,7 +69,8 @@ def main():
 
     with Image.open(imfile) as im:
         # Verify that x,y is within the input image
-        assert(xy[0] < im.size[0] and xy[1] < im.size[1])
+        assert xy[0] >= 0 and xy[0] < im.size[0] \
+            and xy[1] >=0 and xy[1] < im.size[1], 'Bad index'
 
         new_im = traverse(im, xy[0], xy[1])
         new_im.save('images/xverse.png')
