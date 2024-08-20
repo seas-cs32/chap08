@@ -32,7 +32,7 @@ def sepia(pixel):
 def inverse(pixel):
     '''Invert the input pixel'''
     r, g, b = pixel
-    return (256 - r, 256 - g, 256 - b)
+    return (255 - r, 255 - g, 255 - b)
 
 def do_something(pixel):
     '''Does nothing to the pixel'''
