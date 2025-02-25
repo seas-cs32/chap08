@@ -1,3 +1,4 @@
+### chap08/ale02.py
 '''
 ale02.py EVENTUALLY removes a moving object or individual from an image using
 an unspecified number of similar input images.  For each pixel in the shared
@@ -16,7 +17,7 @@ if len(sys.argv) == 1:
 elif len(sys.argv) == 2:
     imfile = 'images/' + sys.argv[1]
 else:
-    sys.exit("Usage: python3 erase32.py imagefile")
+    sys.exit("Usage: python3 ale02.py imagefile")
 
 with Image.open(imfile) as im:
     # Apply a filter that enhances the red and desaturates blue/green
